@@ -1,0 +1,234 @@
+.main {
+  padding-top: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* 个人介绍部分 */
+.introSection {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.introContent {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.photoWrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.introText {
+  position: relative;
+}
+
+.musicWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.textContent {
+  padding-right: 60px;
+}
+
+.textContent h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.textContent p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.textContent a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+/* 作品部分 */
+.projectsSection {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: -1px;
+}
+
+.tab:hover {
+  color: var(--primary-color);
+}
+
+.tab.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.moreButton {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.moreButton a {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.moreButton a:hover {
+  background: var(--primary-color);
+  color: white;
+  opacity: 1;
+}
+
+/* 技术栈 */
+.techSection {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border-color);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.techTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.techTag {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: white;
+  transition: all 0.2s;
+}
+
+.techTag:hover {
+  border-color: var(--primary-color);
+  background: var(--hover-color);
+}
+
+/* 摄影与绘画 */
+.photographySection {
+  padding: 4rem 0;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+}
+
+.link {
+  color: var(--primary-color);
+  margin-left: 0.25rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 968px) {
+  .introContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .photoWrapper {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .textContent {
+    padding-right: 0;
+  }
+
+  .musicWrapper {
+    position: static;
+    margin-bottom: 1rem;
+  }
+
+  .techSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .introSection,
+  .projectsSection,
+  .techSection,
+  .photographySection {
+    padding: 2rem 0;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
