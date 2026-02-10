@@ -11,17 +11,6 @@ export default function MusicPlayer() {
   const [currentTrack, setCurrentTrack] = useState(0)
   const audioRef = useRef<HTMLAudioElement>(null)
 
-  const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause()
-      } else {
-        audioRef.current.play()
-      }
-      setIsPlaying(!isPlaying)
-    }
-  }
-
   const switchTrack = () => {
     const nextTrack = (currentTrack + 1) % PLAYLIST.length
     setCurrentTrack(nextTrack)
