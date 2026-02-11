@@ -9,11 +9,12 @@
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border-color);
-  border-radius: 50%;
-  background: white;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.6);
   color: var(--primary-color);
   transition: all 0.2s;
   cursor: pointer;
+  backdrop-filter: blur(10px);
 }
 
 .musicButton:hover {

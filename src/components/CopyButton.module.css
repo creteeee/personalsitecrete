@@ -5,12 +5,13 @@
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border-color);
-  border-radius: 4px;
-  background: white;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.6);
   color: var(--primary-color);
   cursor: pointer;
   transition: all 0.2s;
   margin-left: 0.5rem;
+  backdrop-filter: blur(10px);
 }
 
 .copyButton:hover {

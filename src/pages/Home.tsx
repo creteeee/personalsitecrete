@@ -26,8 +26,8 @@ const projects = {
   'product-design': [
     {
       id: 'project-3',
-      title: '产品设计项目 1',
-      description: '这是一个产品设计项目的描述...',
+      title: 'PeChat',
+      description: '“纸媒化”微信的思辨App设计和开发',
       image: '/images/project-3-thumbnail.png',
       category: 'product-design' as const,
     },
@@ -155,34 +155,37 @@ export default function Home() {
 
         {/* 技术栈 */}
         <section className={styles.techSection}>
-          <div className={styles.techColumn}>
-            <h3 className={styles.techTitle}>开发语言及平台</h3>
-            <div className={styles.techTags}>
-              {techStack.development.map((tech) => (
-                <span key={tech} className={styles.techTag}>
-                  {tech}
-                </span>
-              ))}
+          <h2 className={styles.sectionTitle}>技术栈</h2>
+          <div className={styles.techColumns}>
+            <div className={styles.techColumn}>
+              <h3 className={styles.techTitle}>开发语言及平台</h3>
+              <div className={styles.techTags}>
+                {techStack.development.map((tech) => (
+                  <span key={tech} className={styles.techTag}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className={styles.techColumn}>
-            <h3 className={styles.techTitle}>AI工具</h3>
-            <div className={styles.techTags}>
-              {techStack.ai.map((tech) => (
-                <span key={tech} className={styles.techTag}>
-                  {tech}
-                </span>
-              ))}
+            <div className={styles.techColumn}>
+              <h3 className={styles.techTitle}>AI工具</h3>
+              <div className={styles.techTags}>
+                {techStack.ai.map((tech) => (
+                  <span key={tech} className={styles.techTag}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className={styles.techColumn}>
-            <h3 className={styles.techTitle}>其他</h3>
-            <div className={styles.techTags}>
-              {techStack.other.map((tech) => (
-                <span key={tech} className={styles.techTag}>
-                  {tech}
-                </span>
-              ))}
+            <div className={styles.techColumn}>
+              <h3 className={styles.techTitle}>其他</h3>
+              <div className={styles.techTags}>
+                {techStack.other.map((tech) => (
+                  <span key={tech} className={styles.techTag}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </section>

@@ -24,7 +24,7 @@ const allProjects = {
   'product-design': [
     {
       id: 'project-3',
-      title: '产品设计项目 1',
+      title: 'PeChat',
       description: '这是一个产品设计项目的描述...',
       image: '/images/project-3-thumbnail.png',
       category: 'product-design' as const,
