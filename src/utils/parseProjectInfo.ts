@@ -15,6 +15,7 @@ export type ContentItem =
   | { type: 'text'; content: string }
   | { type: 'image'; index: number; path: string }
   | { type: 'video'; iframe: string }
+  | { type: 'localVideo'; index: number; path: string }
 
 export async function parseProjectInfo(
   projectId: string
@@ -40,6 +41,7 @@ function getProjectInfoPath(projectId: string): string | null {
   const pathMap: Record<string, string> = {
     'project-3': '/images/PeChat/project-infos.txt',
     'project-4': '/images/Bianbian/project-infos.txt',
+    'project-6': '/images/Taichi/project-infos.txt',
     // 以后可以添加其他项目
     // 'project-1': '/images/Project1/project-infos.txt',
   }
@@ -117,6 +119,15 @@ function parseText(text: string, projectId: string): ProjectContent {
       continue
     }
 
+    // 本地视频
+    const localVideoMatch = line.match(/\[本地视频video-(\d+)\]/)
+    if (localVideoMatch) {
+      const index = parseInt(localVideoMatch[1], 10)
+      const videoPath = getVideoPath(projectId, index)
+      currentContent.push({ type: 'localVideo', index, path: videoPath })
+      continue
+    }
+
     // 正文
     if (line.startsWith('[正文]')) {
       // 收集后续的正文内容，直到遇到下一个标记
@@ -160,9 +171,23 @@ function getImagePath(projectId: string, index: number): string {
   const pathMap: Record<string, string> = {
     'project-3': '/images/PeChat',
     'project-4': '/images/Bianbian',
+    'project-6': '/images/Taichi',
     // 以后可以添加其他项目
   }
 
   const basePath = pathMap[projectId] || '/images'
   return `${basePath}/image-${index}.jpg`
+}
+
+function getVideoPath(projectId: string, index: number): string {
+  // 根据项目ID和视频索引生成路径
+  const pathMap: Record<string, string> = {
+    'project-3': '/images/PeChat',
+    'project-4': '/images/Bianbian',
+    'project-6': '/images/Taichi',
+    // 以后可以添加其他项目
+  }
+
+  const basePath = pathMap[projectId] || '/images'
+  return `${basePath}/video-${index}.mp4`
 }

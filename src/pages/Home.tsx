@@ -38,6 +38,13 @@ const projects = {
       image: '/images/project-4-thumbnail.jpg',
       category: 'product-design' as const,
     },
+    {
+      id: 'project-6',
+      title: '驭气',
+      description: '基于MediaPipe动捕的太极教学系统开发',
+      image: '/images/project-6-thumbnail.jpg',
+      category: 'product-design' as const,
+    },
   ],
   other: [
     {

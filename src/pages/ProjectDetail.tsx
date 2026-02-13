@@ -172,7 +172,7 @@ export default function ProjectDetail() {
                   }
                 }
 
-                // 处理视频
+                // 处理B站视频
                 if (item.type === 'video') {
                   return (
                     <div
@@ -180,6 +180,22 @@ export default function ProjectDetail() {
                       className={styles.videoWrapper}
                       dangerouslySetInnerHTML={{ __html: item.iframe }}
                     />
+                  )
+                }
+
+                // 处理本地视频
+                if (item.type === 'localVideo') {
+                  return (
+                    <div key={itemIndex} className={styles.videoWrapper}>
+                      <video
+                        src={item.path}
+                        controls
+                        className={styles.localVideo}
+                        style={{ width: '100%', height: 'auto' }}
+                      >
+                        您的浏览器不支持视频播放。
+                      </video>
+                    </div>
                   )
                 }
 
