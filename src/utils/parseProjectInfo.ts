@@ -39,6 +39,7 @@ function getProjectInfoPath(projectId: string): string | null {
   // 根据项目ID映射到对应的文本文件路径
   const pathMap: Record<string, string> = {
     'project-3': '/images/PeChat/project-infos.txt',
+    'project-4': '/images/Bianbian/project-infos.txt',
     // 以后可以添加其他项目
     // 'project-1': '/images/Project1/project-infos.txt',
   }
@@ -101,7 +102,17 @@ function parseText(text: string, projectId: string): ProjectContent {
     if (line.startsWith('[b站视频插入]')) {
       const iframeMatch = line.match(/<iframe[^>]*><\/iframe>/)
       if (iframeMatch) {
-        currentContent.push({ type: 'video', iframe: iframeMatch[0] })
+        // 移除自动播放参数，并明确设置为 false，确保视频不会自动播放
+        let iframeHtml = iframeMatch[0]
+        // 移除 autoplay 参数（无论值是什么）
+        iframeHtml = iframeHtml.replace(/[?&]autoplay=[^&"\s]*/gi, '')
+        // 清理可能出现的连续分隔符
+        iframeHtml = iframeHtml.replace(/\?&/g, '?')
+        iframeHtml = iframeHtml.replace(/&&+/g, '&')
+        // 在 src URL 的引号前添加 &autoplay=false
+        // B站URL格式通常是 ...?param1=value1&param2=value2"，所以直接用&连接
+        iframeHtml = iframeHtml.replace(/(src="[^"]*?)(")/, '$1&autoplay=false$2')
+        currentContent.push({ type: 'video', iframe: iframeHtml })
       }
       continue
     }
@@ -148,9 +159,10 @@ function getImagePath(projectId: string, index: number): string {
   // 根据项目ID和图片索引生成路径
   const pathMap: Record<string, string> = {
     'project-3': '/images/PeChat',
+    'project-4': '/images/Bianbian',
     // 以后可以添加其他项目
   }
 
   const basePath = pathMap[projectId] || '/images'
-  return `${basePath}/image-${index}.png`
+  return `${basePath}/image-${index}.jpg`
 }
