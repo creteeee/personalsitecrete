@@ -1,0 +1,40 @@
+[大标题]Nubis体积云复刻 - 体积云调研及渲染方案
+[副标题]Voxel Rendering / Compute Shading / Volumetric Cloud Rendering  / Unity
+
+[章节标题]Demo简介
+[图片img-0]
+[正文]
+体积云的光线步进是非常昂贵的，这是由于每个像素点由视线方向步进时，每次还要向光源位置步进，市面上一些“体素渲染”的方式，减小了体积云的渲染耗时。
+本项目正是一套关于《地平线》系列游戏：Nubis体积云系统的复刻demo，除此之外，我还调研了市场上如《荒野大镖客》等体素雾、体素云的实现方案，总结成学习文档。
+ 
+所有实现技术均来自Nubis已公开项目，项目官方网站及SIGGRAPH / GDC PPT：https://www.guerrilla-games.com/read/nubis-cubed
+《荒野大镖客》相关分享PPT：https://www.advances.realtimerendering.com/s2019/index.htm
+
+[章节标题]Demo展示
+[本地视频video-0]
+[正文]
+本项目实现了 2D建模体积云、3D全步进云 和 3D体素云，并在Nsight里对比了性能，绘制耗时请看文章最后。
+
+
+[章节标题]技术调研-体积云实现分类
+[图片img-1]
+[图片img-2]
+[图片img-3]
+
+[章节标题]技术调研-荒野大镖客LightVolume体积雾调研
+[图片img-4]
+[图片img-5]
+
+[章节标题]Demo实现-Nubis体积云系统
+[图片img-6]
+[图片img-7]
+[图片img-8]
+[图片img-9]
+[图片img-10]
+[图片img-11]
+[图片img-12]
+[图片img-13]
+[图片img-14]
+
+[章节标题]性能测试
+[图片img-15]

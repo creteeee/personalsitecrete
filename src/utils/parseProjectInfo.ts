@@ -16,6 +16,7 @@ export type ContentItem =
   | { type: 'image'; index: number; path: string }
   | { type: 'video'; iframe: string }
   | { type: 'localVideo'; index: number; path: string }
+  | { type: 'embed'; url: string }
 
 export async function parseProjectInfo(
   projectId: string
@@ -39,9 +40,11 @@ export async function parseProjectInfo(
 function getProjectInfoPath(projectId: string): string | null {
   // 根据项目ID映射到对应的文本文件路径
   const pathMap: Record<string, string> = {
+    'project-2': '/images/CloudRender/project-infos.txt',
     'project-3': '/images/PeChat/project-infos.txt',
     'project-4': '/images/Bianbian/project-infos.txt',
     'project-6': '/images/Taichi/project-infos.txt',
+    'project-7': '/images/Yiqizou/project-infos.txt',
     // 以后可以添加其他项目
     // 'project-1': '/images/Project1/project-infos.txt',
   }
@@ -119,6 +122,14 @@ function parseText(text: string, projectId: string): ProjectContent {
       continue
     }
 
+    // 外链嵌入，例如：[嵌入外链https://example.com]
+    const embedMatch = line.match(/\[嵌入外链(https?:\/\/[^\]\s]+)\]/)
+    if (embedMatch) {
+      const url = embedMatch[1]
+      currentContent.push({ type: 'embed', url })
+      continue
+    }
+
     // 本地视频
     const localVideoMatch = line.match(/\[本地视频video-(\d+)\]/)
     if (localVideoMatch) {
@@ -141,7 +152,8 @@ function parseText(text: string, projectId: string): ProjectContent {
           (nextLine.includes('标题') ||
             nextLine.includes('图片') ||
             nextLine.includes('视频') ||
-            nextLine.includes('正文'))
+            nextLine.includes('正文') ||
+            nextLine.includes('外链'))
         ) {
           i-- // 回退一行，让外层循环处理这个标记
           break
@@ -169,9 +181,11 @@ function parseText(text: string, projectId: string): ProjectContent {
 function getImagePath(projectId: string, index: number): string {
   // 根据项目ID和图片索引生成路径
   const pathMap: Record<string, string> = {
+    'project-2': '/images/CloudRender',
     'project-3': '/images/PeChat',
     'project-4': '/images/Bianbian',
     'project-6': '/images/Taichi',
+    'project-7': '/images/Yiqizou',
     // 以后可以添加其他项目
   }
 
@@ -182,9 +196,11 @@ function getImagePath(projectId: string, index: number): string {
 function getVideoPath(projectId: string, index: number): string {
   // 根据项目ID和视频索引生成路径
   const pathMap: Record<string, string> = {
+    'project-2': '/images/CloudRender',
     'project-3': '/images/PeChat',
     'project-4': '/images/Bianbian',
     'project-6': '/images/Taichi',
+    'project-7': '/images/Yiqizou',
     // 以后可以添加其他项目
   }
 

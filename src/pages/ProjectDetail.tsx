@@ -172,7 +172,7 @@ export default function ProjectDetail() {
                   }
                 }
 
-                // 处理B站视频
+              // 处理B站视频
                 if (item.type === 'video') {
                   return (
                     <div
@@ -195,6 +195,20 @@ export default function ProjectDetail() {
                       >
                         您的浏览器不支持视频播放。
                       </video>
+                    </div>
+                  )
+                }
+
+                // 处理外链嵌入
+                if (item.type === 'embed') {
+                  return (
+                    <div key={itemIndex} className={styles.embedWrapper}>
+                      <iframe
+                        src={item.url}
+                        className={styles.embedFrame}
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                      />
                     </div>
                   )
                 }

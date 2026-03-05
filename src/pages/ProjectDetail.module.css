@@ -119,6 +119,25 @@
   height: 100%;
 }
 
+/* 外链嵌入区域，复用与视频类似的 16:9 宽高比 */
+.embedWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.embedFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .placeholder {
   font-family: 'FZLanTingXianHei', sans-serif;
   font-size: 1rem;
