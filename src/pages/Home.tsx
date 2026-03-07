@@ -10,8 +10,8 @@ const projects = {
   'game-tech-art': [
     {
       id: 'project-1',
-      title: '项目标题 1',
-      description: '这是一个游戏技术美术项目的简短描述...',
+      title: '蓝星',
+      description: '同济大学2025年度优秀毕业设计',
       image: '/images/project-1-thumbnail.jpg',
       category: 'game-tech-art' as const,
     },
@@ -20,6 +20,20 @@ const projects = {
       title: 'Nubis体积云复刻',
       description: '体积云调研及渲染方案',
       image: '/images/project-2-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
+      id: 'project-8',
+      title: '独立游戏《蓬莱》',
+      description: '2023同济大学与腾讯联合授课游戏作品',
+      image: '/images/project-8-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
+      id: 'project-9',
+      title: '风格化渲染合集',
+      description: '插画风格/像素化/...持续更新',
+      image: '/images/project-9-thumbnail.jpg',
       category: 'game-tech-art' as const,
     },
   ],

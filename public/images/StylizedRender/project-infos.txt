@@ -1,0 +1,26 @@
+[大标题]风格化渲染合集 - 插画风格/像素化/...持续更新
+[副标题]iOS App / Unity Platform Coding / UX Design / Speculative Design
+
+[章节标题](一）扁平插画效果渲染
+[图片img-0]
+[图片img-1]
+[正文]
+目前在研究生阶段，和同学准备HCI论文所做的严肃教育游戏，我负责程序和TA，美术同学想要一个偏手绘风的渲染风格，因此编写了一套renderfeature和shader，上面是实现的美术效果，用的是同样的renderfeature和shader，只是是否开启描边，扭曲纹理不同的区别。
+[图片img-2]
+[正文]
+我收集了一些插画/三渲二的参考图概括风格化特点，同时思考对应的手段进行还原：
+颜色：插画主要都是大色块，因此物品主色用uv0直接查LUT表解决；uv1用于光照贴图；uv2负责叠加纹理（沃洛诺伊、纸纹）。
+阴影：物品的投影颜色需要和漫反射色调保持一致，这里需要在计算漫反射时同时采样Shadowmap，将阴影部分clamp成一个灰度；投影边缘部分需要有颜色渐变
+边缘/描边：由于交际线需要有侵蚀的感觉，那么直接做后处理最好，不要走单个物体描边，我想到了sobel算子，于是blit了一张color buffer计算像素是否位于色块边缘，以此来判定边缘区域，然后通过一张noise进行偏移，然后混合这张RT和原始color buffer;根据是否需要颜色，我们可以得到水彩和油画两种效果。
+
+[图片img-3]
+[图片img-4]
+[正文]
+提取好特征后，实现起来就是老生常谈了，也很简单。就是写一下物体本身的NPR shader、图像处理的shader、renderfeature传参即可。
+实现卡渲时注意一下暗部和投影一致性的处理，和投影边缘颜色处理即可；
+写后处理shader时，刚开始我是用法线图做的边缘检测，由于只能算法线差异，色块之间和阴影交际线不会被识别到，会和原画有些差异，因此我后来使用color buffer作为后处理图像检测。
+
+[章节标题](二）像素原画渲染还原
+[b站视频插入]<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113038405468777&bvid=BV1fAsMegEWZ&cid=25617696431&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+[正文]
+这是之前做的一个像素渲染demo，参考waneella的平面像素作品并进行建模和卡渲还原，原理都很简单，blit+变分辨率+point 插值；然后就是物体自身的多光源卡渲shader；还制作了接受光源变化的面片云（houdini中烘焙），在程序化天空盒里也比较常见。

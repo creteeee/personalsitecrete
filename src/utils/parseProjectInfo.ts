@@ -40,11 +40,14 @@ export async function parseProjectInfo(
 function getProjectInfoPath(projectId: string): string | null {
   // 根据项目ID映射到对应的文本文件路径
   const pathMap: Record<string, string> = {
+    'project-1': '/images/BlueStar/project-infos.txt',
     'project-2': '/images/CloudRender/project-infos.txt',
     'project-3': '/images/PeChat/project-infos.txt',
     'project-4': '/images/Bianbian/project-infos.txt',
     'project-6': '/images/Taichi/project-infos.txt',
     'project-7': '/images/Yiqizou/project-infos.txt',
+    'project-8': '/images/Penglai/project-infos.txt',
+    'project-9': '/images/StylizedRender/project-infos.txt',
     // 以后可以添加其他项目
     // 'project-1': '/images/Project1/project-infos.txt',
   }
@@ -181,11 +184,14 @@ function parseText(text: string, projectId: string): ProjectContent {
 function getImagePath(projectId: string, index: number): string {
   // 根据项目ID和图片索引生成路径
   const pathMap: Record<string, string> = {
+    'project-1': '/images/BlueStar',
     'project-2': '/images/CloudRender',
     'project-3': '/images/PeChat',
     'project-4': '/images/Bianbian',
     'project-6': '/images/Taichi',
     'project-7': '/images/Yiqizou',
+    'project-8': '/images/Penglai',
+    'project-9': '/images/StylizedRender',
     // 以后可以添加其他项目
   }
 
@@ -196,11 +202,14 @@ function getImagePath(projectId: string, index: number): string {
 function getVideoPath(projectId: string, index: number): string {
   // 根据项目ID和视频索引生成路径
   const pathMap: Record<string, string> = {
+    'project-1': '/images/BlueStar',
     'project-2': '/images/CloudRender',
     'project-3': '/images/PeChat',
     'project-4': '/images/Bianbian',
     'project-6': '/images/Taichi',
     'project-7': '/images/Yiqizou',
+    'project-8': '/images/Penglai',
+    'project-9': '/images/StylizedRender',
     // 以后可以添加其他项目
   }
 

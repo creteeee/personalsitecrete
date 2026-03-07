@@ -8,8 +8,8 @@ const allProjects = {
   'game-tech-art': [
     {
       id: 'project-1',
-      title: '项目标题 1',
-      description: '这是一个游戏技术美术项目的简短描述...',
+      title: '蓝星',
+      description: '同济大学2025年度优秀毕业设计',
       image: '/images/project-1-thumbnail.jpg',
       category: 'game-tech-art' as const,
     },
@@ -20,6 +20,21 @@ const allProjects = {
       image: '/images/project-2-thumbnail.jpg',
       category: 'game-tech-art' as const,
     },
+    {
+      id: 'project-8',
+      title: '独立游戏《蓬莱》',
+      description: '2023同济大学与腾讯联合授课游戏作品',
+      image: '/images/project-8-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
+      id: 'project-9',
+      title: '风格化渲染合集',
+      description: '插画风格/像素化/...持续更新',
+      image: '/images/project-9-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+
   ],
   'product-design': [
     {
@@ -43,13 +58,13 @@ const allProjects = {
       image: '/images/project-6-thumbnail.jpg',
       category: 'product-design' as const,
     },
-    {
-      id: 'project-7',
-      title: '一起走',
-      description: 'AI多人行程规划管家',
-      image: '/images/project-7-thumbnail.jpg',
-      category: 'product-design' as const,
-    },
+      {
+        id: 'project-7',
+        title: '一起走',
+        description: 'AI多人行程规划管家',
+        image: '/images/project-7-thumbnail.jpg',
+        category: 'product-design' as const,
+      },
   ],
   other: [
     {
