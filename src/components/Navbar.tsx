@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import MusicPlayer from '@/components/MusicPlayer'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
@@ -11,6 +12,7 @@ export default function Navbar() {
         <div className={styles.links}>
           <Link to="/about">About me</Link>
           <Link to="/contact">Contact Me</Link>
+          <MusicPlayer />
         </div>
       </div>
     </nav>

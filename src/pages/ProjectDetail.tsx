@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import Navbar from '@/components/Navbar'
 import ImageLightbox from '@/components/ImageLightbox'
 import { parseProjectInfo, ProjectContent } from '@/utils/parseProjectInfo'
 import styles from './ProjectDetail.module.css'
@@ -41,33 +40,26 @@ export default function ProjectDetail() {
 
   if (loading) {
     return (
-      <>
-        <Navbar />
-        <main className={styles.main}>
-          <div className={styles.container}>
-            <p className={styles.placeholder}>加载中...</p>
-          </div>
-        </main>
-      </>
+      <main className={styles.main}>
+        <div className={styles.container}>
+          <p className={styles.placeholder}>加载中...</p>
+        </div>
+      </main>
     )
   }
 
   if (!content) {
     return (
-      <>
-        <Navbar />
-        <main className={styles.main}>
-          <div className={styles.container}>
-            <p className={styles.placeholder}>项目详情未找到</p>
-          </div>
-        </main>
-      </>
+      <main className={styles.main}>
+        <div className={styles.container}>
+          <p className={styles.placeholder}>项目详情未找到</p>
+        </div>
+      </main>
     )
   }
 
   return (
     <>
-      <Navbar />
       <main className={styles.main}>
         <div className={styles.container}>
           <h1 className={styles.mainTitle}>{content.mainTitle}</h1>

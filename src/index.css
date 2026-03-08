@@ -20,7 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--primary-color);
   background-color: var(--bg-color);
-  background-image: url('/images/profile-bg.png');
+  background-image: url('/images/profile-bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -37,7 +37,7 @@ body::before {
   left: 40px;
   right: 40px;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 0;
   pointer-events: none;
 }

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Navbar from '@/components/Navbar'
 import ProjectCard from '@/components/ProjectCard'
 import styles from './Projects.module.css'
 
@@ -78,18 +77,18 @@ const allProjects = {
       image: '/images/project-4-thumbnail.jpg',
       category: 'product-design' as const,
     },
-    {
-      id: 'project-6',
-      title: '驭气',
-      description: '基于MediaPipe动捕的太极教学系统开发',
-      image: '/images/project-6-thumbnail.jpg',
-      category: 'product-design' as const,
-    },
       {
-        id: 'project-7',
+        id: 'project-6',
         title: '一起走',
         description: 'AI多人行程规划管家',
         image: '/images/project-7-thumbnail.jpg',
+        category: 'product-design' as const,
+      },
+      {
+        id: 'project-7',
+        title: '驭气',
+        description: '基于MediaPipe动捕的太极教学系统开发',
+        image: '/images/project-6-thumbnail.jpg',
         category: 'product-design' as const,
       },
   ],
@@ -136,53 +135,50 @@ export default function Projects() {
   }, [activeCategory, displayedProjects.length])
 
   return (
-    <>
-      <Navbar />
-      <main className={styles.main}>
-        <div className={styles.container}>
-          <h1 className={styles.title}>个人项目</h1>
-          <div className={styles.tabs}>
-            <button
-              className={`${styles.tab} ${
-                activeCategory === 'game-tech-art' ? styles.active : ''
-              }`}
-              onClick={() => {
-                setActiveCategory('game-tech-art')
-                setPage(1)
-              }}
-            >
-              游戏技术美术
-            </button>
-            <button
-              className={`${styles.tab} ${
-                activeCategory === 'product-design' ? styles.active : ''
-              }`}
-              onClick={() => {
-                setActiveCategory('product-design')
-                setPage(1)
-              }}
-            >
-              产品设计
-            </button>
-            <button
-              className={`${styles.tab} ${
-                activeCategory === 'other' ? styles.active : ''
-              }`}
-              onClick={() => {
-                setActiveCategory('other')
-                setPage(1)
-              }}
-            >
-              其他作品
-            </button>
-          </div>
-          <div className={styles.projectsGrid}>
-            {displayedProjects.map((project) => (
-              <ProjectCard key={project.id} {...project} />
-            ))}
-          </div>
+    <main className={styles.main}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>个人项目</h1>
+        <div className={styles.tabs}>
+          <button
+            className={`${styles.tab} ${
+              activeCategory === 'game-tech-art' ? styles.active : ''
+            }`}
+            onClick={() => {
+              setActiveCategory('game-tech-art')
+              setPage(1)
+            }}
+          >
+            游戏技术美术
+          </button>
+          <button
+            className={`${styles.tab} ${
+              activeCategory === 'product-design' ? styles.active : ''
+            }`}
+            onClick={() => {
+              setActiveCategory('product-design')
+              setPage(1)
+            }}
+          >
+            产品设计
+          </button>
+          <button
+            className={`${styles.tab} ${
+              activeCategory === 'other' ? styles.active : ''
+            }`}
+            onClick={() => {
+              setActiveCategory('other')
+              setPage(1)
+            }}
+          >
+            其他作品
+          </button>
         </div>
-      </main>
-    </>
+        <div className={styles.projectsGrid}>
+          {displayedProjects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
+        </div>
+      </div>
+    </main>
   )
 }

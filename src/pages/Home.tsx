@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import Navbar from '@/components/Navbar'
-import MusicPlayer from '@/components/MusicPlayer'
 import ProjectCard from '@/components/ProjectCard'
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
@@ -82,16 +80,16 @@ const projects = {
     },
     {
       id: 'project-6',
-      title: '驭气',
-      description: '基于MediaPipe动捕的太极教学系统开发',
-      image: '/images/project-6-thumbnail.jpg',
+      title: '一起走',
+      description: 'AI多人行程规划管家',
+      image: '/images/project-7-thumbnail.jpg',
       category: 'product-design' as const,
     },
     {
       id: 'project-7',
-      title: '一起走',
-      description: 'AI多人行程规划管家',
-      image: '/images/project-7-thumbnail.jpg',
+      title: '驭气',
+      description: '基于MediaPipe动捕的太极教学系统开发',
+      image: '/images/project-6-thumbnail.jpg',
       category: 'product-design' as const,
     },
   ],
@@ -140,9 +138,7 @@ export default function Home() {
   const displayedProjects = projects[activeCategory].slice(0, 6)
 
   return (
-    <>
-      <Navbar />
-      <main className={styles.main}>
+    <main className={styles.main}>
         {/* 个人介绍部分 */}
         <section className={styles.introSection}>
           <div className={styles.introContent}>
@@ -154,23 +150,24 @@ export default function Home() {
               />
             </div>
             <div className={styles.introText}>
-              <div className={styles.musicWrapper}>
-                <MusicPlayer />
-              </div>
               <div className={styles.textContent}>
-                <h1>你好！我是 XINYUE ZHANG，你也可以叫我的昵称 Crete！</h1>
+                <h1>你好！我是 Xinyue Zhang，你也可以叫我的昵称 Crete。</h1>
                 <p>
-                  我目前是一名研一的学生，我致力于结合交互体验、美学和技术，发展方向为{' '}
-                  <strong>游戏技术美术</strong> / <strong>交互产品设计开发</strong>{' '}
-                  等，本科就读于同济大学工业设计，目前方向为媒体与传达设计，即将于26Fall前往Aalto攻读{' '}
-                  <strong>CoID专业交互方向</strong>~
-                </p>
+                  我致力于探索<strong>交互体验、技术实现与视觉表达之间的结合</strong>，通过原型开发和系统搭建，
+                  将抽象的交互概念转化为可运行的体验。我的兴趣方向包括 <strong>游戏技术美术</strong>、
+                  <strong>交互系统开发</strong> 以及 <strong>产品设计</strong>。{' '}
+                  </p>
+                  <p>
+                  本科毕业于 <strong>同济大学工业设计（工学）专业</strong>，目前在同济大学设计创意学院攻读研究生
+                  （媒体与传达设计方向）。我将于 <strong>2026 Fall 前往 Aalto University 的 Collaborative and Industrial Design（CoID）项目</strong>攻读双学位，
+                  继续探索<strong>交互设计与技术驱动体验</strong>的更多可能。
+                  </p>
                 <p>
-                  欢迎联系我的邮箱{' '}
+                  如果你对我感兴趣，欢迎联系我：{' '}
                   <a href="mailto:15522584986@163.com">15522584986@163.com</a>
                 </p>
                 <p className={styles.note}>
-                  （ps：你可以点击切换右侧的歌单哦！）
+                  （ps：你可以点击切换右上角关闭/开启音乐，或者切换歌单哦！）
                 </p>
               </div>
             </div>
@@ -264,6 +261,5 @@ export default function Home() {
           </p>
         </section>
       </main>
-    </>
   )
 }
