@@ -1,0 +1,22 @@
+[大标题]离线渲染合集 - 风格化渲染短片合集
+[副标题]Webgl Game / Wechat Minigame / Render Pipeline / Performance Optimization
+
+[章节标题]（一）Space  Not Found - 手绘风格叙事短片
+[b站视频插入]<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1455507126&bvid=BV1qi421v7cA&cid=1579749321&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+[正文]
+本作品以我所生活过的天津21世纪初的街区样貌为灵感，以“我”童年时期的切身体验出发，将城市更新的记忆与个人情绪结合，以第一视角展开叙述。
+结合AI纹理生成，参数化模型制作和风格化的渲染方法，尝试展现如画作般的2.5d的视觉效果，利用体现诗意流淌的肌理以及蒙太奇的镜头处理，传达城市生活中的诗意与美好，以及对记忆中美好时光的怀念。
+
+[图片img-0]
+[图片img-1]
+
+[章节标题]（二）加融 - 家庭情绪调节APP概念短片
+[b站视频插入]<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1455687604&bvid=BV1ci421e7YJ&cid=1579743871&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+[正文]
+这个短片是本科设计的一个app的宣传短片，由blender绑定+grease pencil风格化渲染。
+
+[章节标题]（三）瞰剧 -AR剧场辅助观影产品概念短片
+[b站视频插入]<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1505510324&bvid=BV1LD421M72D&cid=1579780717&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+[正文]
+该短片为本科AR概念产品的渲染宣传片。
+

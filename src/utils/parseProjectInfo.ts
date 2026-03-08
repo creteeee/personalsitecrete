@@ -48,6 +48,11 @@ function getProjectInfoPath(projectId: string): string | null {
     'project-7': '/images/Yiqizou/project-infos.txt',
     'project-8': '/images/Penglai/project-infos.txt',
     'project-9': '/images/StylizedRender/project-infos.txt',
+    'project-10': '/images/BattleCap/project-infos.txt',
+    'project-11': '/images/DemonGarden/project-infos.txt',
+    'project-12': '/images/SpaceNotFound/project-infos.txt',
+    'project-13': '/images/Taichi/project-infos.txt',
+    'project-5': '/images/CoastLayers/project-infos.txt',
     // 以后可以添加其他项目
     // 'project-1': '/images/Project1/project-infos.txt',
   }
@@ -192,6 +197,11 @@ function getImagePath(projectId: string, index: number): string {
     'project-7': '/images/Yiqizou',
     'project-8': '/images/Penglai',
     'project-9': '/images/StylizedRender',
+    'project-10': '/images/BattleCap',
+    'project-11': '/images/DemonGarden',
+    'project-12': '/images/SpaceNotFound',
+    'project-13': '/images/Taichi',
+    'project-5': '/images/CoastLayers',
     // 以后可以添加其他项目
   }
 
@@ -210,6 +220,11 @@ function getVideoPath(projectId: string, index: number): string {
     'project-7': '/images/Yiqizou',
     'project-8': '/images/Penglai',
     'project-9': '/images/StylizedRender',
+    'project-10': '/images/BattleCap',
+    'project-11': '/images/DemonGarden',
+    'project-12': '/images/SpaceNotFound',
+    'project-13': '/images/Taichi',
+    'project-5': '/images/CoastLayers',
     // 以后可以添加其他项目
   }
 

@@ -1,0 +1,21 @@
+[大标题]瓶盖战舰 - 已发售独立游戏
+[副标题]VFX / Game Development / 3D Modeling / UX Design / Technical Art
+
+[章节标题]游戏简介
+[图片img-0]
+[正文]
+《瓶盖战舰》（Battle Cap）是我在2024年年初在“机壳杏仁”工作室参与制作的游戏，已于2025年在steam发售。“机壳杏仁”是一家由复旦、交大的三位研究生担任主创的初创公司，我于2024年初加入实习，这是我当年第一次进入游戏公司实习，参与了一些3D资产的制作、UX交互设计、和一些UI所需要的Shader和控制脚本。
+
+[章节标题]游戏实机
+[b站视频插入]<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=112523679892481&bvid=BV1BRKoeMExG&cid=500001564137913&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+[章节标题]玩法简介
+[图片img-1]
+[正文]
+这是一款多人海战派对游戏，灵感来自于许多孩子童年时期的瓶盖，每类瓶盖有不同的能力，瓶盖互相拼接可以升级，组成更大舰船，拥有更大活力，游戏分为PVP和PVE两种模式。
+
+[章节标题]UX设计
+[图片img-2]
+
+[章节标题]美术与技术美术
+[图片img-3]

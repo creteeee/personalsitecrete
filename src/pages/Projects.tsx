@@ -29,12 +29,39 @@ const allProjects = {
     },
     {
       id: 'project-9',
-      title: '风格化渲染合集',
+      title: '风格化实时渲染合集',
       description: '插画风格/像素化/...持续更新',
       image: '/images/project-9-thumbnail.jpg',
       category: 'game-tech-art' as const,
     },
-
+    {
+      id: 'project-10',
+      title: '瓶盖战舰',
+      description: '已发售独立游戏',
+      image: '/images/project-10-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
+      id: 'project-11',
+      title: '行走的江南园林',
+      description: '同济大学与网师园合作项目',
+      image: '/images/project-11-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
+      id: 'project-12',
+      title: '离线渲染合集',
+      description: '风格化渲染短片合集',
+      image: '/images/project-12-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
+      id: 'project-13',
+      title: '驭气',
+      description: '基于MediaPipe动捕的太极教学系统开发',
+      image: '/images/project-6-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
   ],
   'product-design': [
     {
@@ -69,8 +96,8 @@ const allProjects = {
   other: [
     {
       id: 'project-5',
-      title: '其他作品 1',
-      description: '这是其他类型作品的描述...',
+      title: 'Through The Layers',
+      description: '临港海滩结构可视化网站',
       image: '/images/project-5-thumbnail.jpg',
       category: 'other' as const,
     },
