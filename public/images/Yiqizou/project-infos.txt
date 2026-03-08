@@ -11,6 +11,7 @@
 [章节标题]App网站
 [嵌入外链https://yiqizou.nocode.host]
 [正文]
+网址：https://yiqizou.nocode.host
 注：若未返回行程规划结果，可能是因为deepseek api欠费，您可以通过creteyue@outlook.com邮箱联系我解决
 
 [章节标题]痛点分析
