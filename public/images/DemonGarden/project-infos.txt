@@ -10,4 +10,5 @@
 [b站视频插入]<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116102948458774&bvid=BV1TUf3BxEWi&cid=36179348955&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 [章节标题]体验链接（有时需调整浏览器缩放，目前暂未适配到所有情况）
-[嵌入外链https://tjwm.tongji.edu.cn/JiangNanGarden/index.html]
+[正文]
+https://tjwm.tongji.edu.cn/JiangNanGarden/index.html
