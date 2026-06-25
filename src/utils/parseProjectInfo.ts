@@ -40,13 +40,16 @@ export async function parseProjectInfo(
 function getProjectInfoPath(projectId: string): string | null {
   // 根据项目ID映射到对应的文本文件路径
   const pathMap: Record<string, string> = {
+    'project-14': '/images/CatNAI/project-infos.txt',
     'project-1': '/images/BlueStar/project-infos.txt',
     'project-2': '/images/CloudRender/project-infos.txt',
+    'project-15': '/images/Fengshui/project-infos.txt',
     'project-3': '/images/PeChat/project-infos.txt',
     'project-4': '/images/Bianbian/project-infos.txt',
     'project-7': '/images/Taichi/project-infos.txt',
     'project-6': '/images/Yiqizou/project-infos.txt',
     'project-8': '/images/Penglai/project-infos.txt',
+    'project-16': '/images/Jichangyuan/project-infos.txt',
     'project-9': '/images/StylizedRender/project-infos.txt',
     'project-10': '/images/BattleCap/project-infos.txt',
     'project-11': '/images/DemonGarden/project-infos.txt',
@@ -192,6 +195,9 @@ function getImagePath(projectId: string, index: number): string {
     'project-1': '/images/BlueStar',
     'project-2': '/images/CloudRender',
     'project-3': '/images/PeChat',
+    'project-14': '/images/CatNAI',
+    'project-15': '/images/Fengshui',
+    'project-16': '/images/Jichangyuan',
     'project-4': '/images/Bianbian',
     'project-7': '/images/Taichi',
     'project-6': '/images/Yiqizou',
@@ -206,7 +212,13 @@ function getImagePath(projectId: string, index: number): string {
   }
 
   const basePath = pathMap[projectId] || '/images'
-  return `${basePath}/image-${index}.jpg`
+  return `${basePath}/image-${index}`
+}
+
+const IMAGE_EXTENSIONS = ['.png', '.jpg'] as const
+
+export function getImageCandidates(basePath: string): string[] {
+  return IMAGE_EXTENSIONS.map((ext) => `${basePath}${ext}`)
 }
 
 function getVideoPath(projectId: string, index: number): string {
@@ -215,6 +227,9 @@ function getVideoPath(projectId: string, index: number): string {
     'project-1': '/images/BlueStar',
     'project-2': '/images/CloudRender',
     'project-3': '/images/PeChat',
+    'project-14': '/images/CatNAI',
+    'project-15': '/images/Fengshui',
+    'project-16': '/images/Jichangyuan',
     'project-4': '/images/Bianbian',
     'project-7': '/images/Taichi',
     'project-6': '/images/Yiqizou',

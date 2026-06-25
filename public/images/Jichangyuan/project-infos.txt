@@ -1,0 +1,25 @@
+[大标题]凤谷回音 - 同济大学与寄畅园合作项目
+[副标题]Webgl Game / Wechat Minigame / Game Design
+
+[章节标题]游戏简介
+[正文]
+本游戏为设计创意学院开设的研究生一年级游戏课程，我们实验室与寄畅园合作，一个月极限开发了流程约为40min的demo。
+我是本项目的组长，负责主策和程序，团队为7人小组，除了两名成员外，大多是unity新手，但是通过磨合与合作，还是完成了一个较为完整的游戏demo。
+我负责了游戏的玩法策划、系统策划和程序实现，完成了以“声音收集”和“声音释放”为主要核心的玩法，制作了关卡编辑器，并拆解实现了地图、对话、动画、声音玩法系统、UI等模块。
+
+[章节标题]游戏PV
+[b站视频插入]<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116788348133099&bvid=BV1itj86WEkE&cid=39292242898&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+[章节标题]介绍视频
+[b站视频插入]<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116788348066797&bvid=BV1jtj86WEiY&cid=39292242472&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+
+[章节标题]创作阐述
+[图片img-0]
+[图片img-1]
+[图片img-2]
+[图片img-3]
+[图片img-4]
+[图片img-5]
+[图片img-6]
+[图片img-7]

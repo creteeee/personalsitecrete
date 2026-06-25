@@ -7,6 +7,13 @@ import styles from './Home.module.css'
 const projects = {
   'game-tech-art': [
     {
+      id: 'project-14',
+      title: '猫与AI的奇幻漂流',
+      description: '莉莉丝高校游戏大赛二等奖、腾讯光子AI赛道入围',
+      image: '/images/project-14-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
       id: 'project-1',
       title: '蓝星',
       description: '同济大学2025年度优秀毕业设计',
@@ -28,17 +35,31 @@ const projects = {
       category: 'game-tech-art' as const,
     },
     {
-      id: 'project-9',
-      title: '风格化渲染合集',
-      description: '插画风格/像素化/...持续更新',
-      image: '/images/project-9-thumbnail.jpg',
+      id: 'project-15',
+      title: '破煞吧，大师！',
+      description: '2026开拓芯最佳玩法游戏入围，风水华容道解谜游戏',
+      image: '/images/project-15-thumbnail.jpg',
       category: 'game-tech-art' as const,
     },
     {
       id: 'project-10',
       title: '瓶盖战舰',
-      description: '已发售独立游戏',
+      description: '已发售独立游戏，2024腾讯GWB行业大赛银奖',
       image: '/images/project-10-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
+      id: 'project-16',
+      title: '凤谷回音',
+      description: '同济大学与寄畅园合作项目',
+      image: '/images/project-16-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
+      id: 'project-9',
+      title: '风格化渲染合集',
+      description: '插画风格/像素化/...持续更新',
+      image: '/images/project-9-thumbnail.jpg',
       category: 'game-tech-art' as const,
     },
     {
@@ -157,8 +178,7 @@ export default function Home() {
                 <h1>你好！我是 Xinyue Zhang，你也可以叫我的昵称 Crete。</h1>
                 <p>
                   我致力于探索<strong>交互体验、技术实现与视觉表达之间的结合</strong>，通过原型开发和系统搭建，
-                  将抽象的交互概念转化为可运行的体验。我的兴趣方向包括 <strong>游戏技术美术</strong>、
-                  <strong>交互系统开发</strong> 以及 <strong>产品设计</strong>。{' '}
+                  将抽象的交互概念转化为可运行的体验。我的兴趣方向包括 <strong>游戏设计与技术美术</strong> 以及 <strong>产品设计</strong>。{' '}
                   </p>
                   <p>
                   本科毕业于 <strong>同济大学工业设计（工学）专业</strong>，目前在同济大学设计创意学院攻读研究生
@@ -187,7 +207,7 @@ export default function Home() {
               }`}
               onClick={() => setActiveCategory('game-tech-art')}
             >
-              游戏技术美术
+              游戏设计与技术美术
             </button>
             <button
               className={`${styles.tab} ${

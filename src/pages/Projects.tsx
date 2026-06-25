@@ -6,6 +6,13 @@ import styles from './Projects.module.css'
 const allProjects = {
   'game-tech-art': [
     {
+      id: 'project-14',
+      title: '猫与AI的奇幻漂流',
+      description: '莉莉丝高校游戏大赛二等奖、腾讯光子AI赛道入围',
+      image: '/images/project-14-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
       id: 'project-1',
       title: '蓝星',
       description: '同济大学2025年度优秀毕业设计',
@@ -27,6 +34,13 @@ const allProjects = {
       category: 'game-tech-art' as const,
     },
     {
+      id: 'project-15',
+      title: '破煞吧，大师！',
+      description: '2026开拓芯最佳玩法游戏入围，风水华容道解谜游戏',
+      image: '/images/project-15-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
       id: 'project-9',
       title: '风格化实时渲染合集',
       description: '插画风格/像素化/...持续更新',
@@ -38,6 +52,13 @@ const allProjects = {
       title: '瓶盖战舰',
       description: '已发售独立游戏',
       image: '/images/project-10-thumbnail.jpg',
+      category: 'game-tech-art' as const,
+    },
+    {
+      id: 'project-16',
+      title: '凤谷回音',
+      description: '同济大学与寄畅园合作项目',
+      image: '/images/project-16-thumbnail.jpg',
       category: 'game-tech-art' as const,
     },
     {
@@ -148,7 +169,7 @@ export default function Projects() {
               setPage(1)
             }}
           >
-            游戏技术美术
+            游戏设计与技术美术
           </button>
           <button
             className={`${styles.tab} ${

@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom'
+import ProjectImage from '@/components/ProjectImage'
 import styles from './ProjectCard.module.css'
+
+function getImageBasePath(image: string): string {
+  return image.replace(/\.(png|jpe?g)$/i, '')
+}
 
 interface ProjectCardProps {
   id: string
@@ -18,8 +23,8 @@ export default function ProjectCard({
   return (
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
-        <img
-          src={image}
+        <ProjectImage
+          basePath={getImageBasePath(image)}
           alt={title}
           className={styles.image}
         />

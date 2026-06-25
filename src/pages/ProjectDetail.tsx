@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ImageLightbox from '@/components/ImageLightbox'
+import ProjectImage from '@/components/ProjectImage'
 import { parseProjectInfo, ProjectContent } from '@/utils/parseProjectInfo'
 import styles from './ProjectDetail.module.css'
 
@@ -89,13 +90,13 @@ export default function ProjectDetail() {
                     return (
                       <div key={itemIndex} className={styles.sideBySideImages}>
                         <div className={styles.imageWrapper}>
-                          <img
-                            src={item.path}
+                          <ProjectImage
+                            basePath={item.path}
                             alt={`${section.title} - 图片 ${item.index}`}
                             className={styles.image}
-                            onClick={() =>
+                            onClick={(resolvedSrc) =>
                               handleImageClick(
-                                item.path,
+                                resolvedSrc,
                                 `${section.title} - 图片 ${item.index}`
                               )
                             }
@@ -103,13 +104,13 @@ export default function ProjectDetail() {
                         </div>
                         {nextItem?.type === 'image' && (
                           <div className={styles.imageWrapper}>
-                            <img
-                              src={(nextItem as any).path}
+                            <ProjectImage
+                              basePath={(nextItem as any).path}
                               alt={`${section.title} - 图片 ${(nextItem as any).index}`}
                               className={styles.image}
-                              onClick={() =>
+                              onClick={(resolvedSrc) =>
                                 handleImageClick(
-                                  (nextItem as any).path,
+                                  resolvedSrc,
                                   `${section.title} - 图片 ${(nextItem as any).index}`
                                 )
                               }
@@ -131,13 +132,13 @@ export default function ProjectDetail() {
                     // 如果前一个不是img-6，正常渲染
                     return (
                       <div key={itemIndex} className={styles.imageWrapper}>
-                        <img
-                          src={item.path}
+                        <ProjectImage
+                          basePath={item.path}
                           alt={`${section.title} - 图片 ${item.index}`}
                           className={styles.image}
-                          onClick={() =>
+                          onClick={(resolvedSrc) =>
                             handleImageClick(
-                              item.path,
+                              resolvedSrc,
                               `${section.title} - 图片 ${item.index}`
                             )
                           }
@@ -148,13 +149,13 @@ export default function ProjectDetail() {
                     // 普通全宽图片
                     return (
                       <div key={itemIndex} className={styles.imageWrapper}>
-                        <img
-                          src={item.path}
+                        <ProjectImage
+                          basePath={item.path}
                           alt={`${section.title} - 图片 ${item.index}`}
                           className={styles.image}
-                          onClick={() =>
+                          onClick={(resolvedSrc) =>
                             handleImageClick(
-                              item.path,
+                              resolvedSrc,
                               `${section.title} - 图片 ${item.index}`
                             )
                           }
